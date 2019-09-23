@@ -21,10 +21,10 @@ echo "Now you can open python-3.7.4 by commend python3."
 echo -n "Do you wanna rename python3 to py?y/n/(or input a name):"
 read tag
 Shell="bash"
-command -v zsh
+temp=$(command -v zsh)
 if [ "$?" = "0" ]; then Shell="zsh"
 fi
-if [ "$tag"x = "y"x ]; then echo "alias py=python3">>~/."$Shell"rc && source ~/."Shell"rc
+if [ "$tag"x = "y"x ]; then echo "alias py=python3">>~/."$Shell"rc && source ~/."$Shell"rc
 elif [ "$tag"x = "n"x || "$tag"x = "x" ]; then exit
-else echo "alias py=$tag">>~/."Shell"rc && source ~/."Shell"rc
+else echo "alias py=$tag">>~/."$Shell"rc && source ~/."$Shell"rc
 fi
