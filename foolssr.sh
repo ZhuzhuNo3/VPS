@@ -8,7 +8,7 @@ expect {
 "*Enter*" { send "\r" ; after 300 ; exp_continue }
 "*\[n\]*" { send "\r" ; after 300 ; exp_continue }
 "*\[y\]*" { send "\r" ; after 300 ; exp_continue }
-"*root@*" { send "bash ssr.sh" }
+"*root@*" { send "bash ssr.sh\r" }
 }
 expect {
 "*\[1-15\]*" { send "1\r" ; after 300 ; exp_continue }
@@ -19,7 +19,7 @@ expect {
 "*Y/n*" { send "Y\r" }
 }
 expect {
-"*):*" { send "\r" ; after 300 ; exp_continue }
 "*y/N)*" { send "y\r" }
+"*):*" { send "\r" ; after 300 ; exp_continue }
 }
 interact
