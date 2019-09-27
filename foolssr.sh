@@ -23,6 +23,6 @@ expect {
 "*):*" { send "\r" ; sleep 1 ; exp_continue }
 }
 expect {
-"*root@*" { send "rm \-rf `ls \|grep \".*.sh\" \|grep \-v \"^ssr.sh\"`" }
+"*root@*" { send "rm \-rf `ls \|grep \".*.sh\" \|grep \-v \"^ssr.sh\"`\r" }
 }
 interact
