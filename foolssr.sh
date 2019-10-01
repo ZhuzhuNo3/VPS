@@ -6,8 +6,8 @@ spawn bash
 send "bash ServerSpeederCentOS6.sh\r"
 expect {
 "*Enter*" { send "\r" ; sleep 1 ; exp_continue }
-"*\[n\]*" { send "\r" ; sleep 1 ; exp_continue }
-"*\[y\]*" { send "\r" ; sleep 1 ; exp_continue }
+"*\\\[n\\\]*" { send "\r" ; sleep 1 ; exp_continue }
+"*\\\[y\\\]*" { send "\r" ; sleep 1 ; exp_continue }
 "*root@*" { send "bash ssr.sh\r" }
 }
 expect {
