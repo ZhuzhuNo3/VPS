@@ -11,7 +11,7 @@ expect {
 "*root@*" { send "bash ssr.sh\r" }
 }
 expect {
-"*\[1\-15\]*" { send "1\r" ; sleep 1 ; exp_continue }
+"*请输入数字*" { send "1\r" ; sleep 1 ; exp_continue }
 "*2333)*" { send "$port\r" ; sleep 1 ; exp_continue }
 "*doub.io)*" { send "$password\r" ; sleep 1 ; exp_continue }
 "*ctr)*" { send "10\r" ; sleep 1 ; exp_continue }
